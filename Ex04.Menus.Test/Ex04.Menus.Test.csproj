@@ -34,7 +34,18 @@
   <ItemGroup>
     <Compile Include="DelegateTest.cs" />
     <Compile Include="InterfaceTest.cs" />
+    <Compile Include="Interface\CharActionClassBase.cs" />
+    <Compile Include="Interface\CharsCounter.cs" />
+    <Compile Include="Interface\DatePrinter.cs" />
+    <Compile Include="Interface\SpacesCounter.cs" />
+    <Compile Include="Interface\TimePrinter.cs" />
+    <Compile Include="Interface\VersionPrinter.cs" />
     <Compile Include="Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Ex04.Menus.Interfaces">
+      <HintPath>..\Ex04.Menus.Interfaces\Ex04.Menus.Interfaces.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

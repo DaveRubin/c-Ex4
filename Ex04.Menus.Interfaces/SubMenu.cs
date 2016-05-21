@@ -2,22 +2,22 @@
 {
     public class SubMenu : MenuItem
     {
-        private Menu m_innerMenu;
+        private readonly Menu r_innerMenu;
 
         public SubMenu(string i_Name)
             : base(i_Name)
         {
-            m_innerMenu = new Menu(i_Name, "back");
+            r_innerMenu = new Menu(i_Name, "back");
         }
 
         public void AddItem(MenuItem i_MenuItem)
         {
-            m_innerMenu.AddItem(i_MenuItem);
+            r_innerMenu.AddItem(i_MenuItem);
         }
 
         public override void OnSelection()
         {
-            m_innerMenu.Show();
+            r_innerMenu.Show();
         }
     }
 }

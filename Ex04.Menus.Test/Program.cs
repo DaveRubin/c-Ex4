@@ -11,4 +11,5 @@
             delegateTest.Test();
             interfaceTest.Test();
         }
+    }
 }
