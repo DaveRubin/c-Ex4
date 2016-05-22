@@ -5,11 +5,6 @@
 
     public class MenuView
     {
-        private const string k_MenuItemTemplate = "{0} - {1}";
-        private const string k_MenuGetSelectionMessage = "Please enter your selection";
-        private const string k_MenuHeaderTemplate = @"=====================
-{0}
-=====================";
 
         public static void PrintMenu(string i_Header, string i_BackWord, List<MenuItem> i_Items)
         {

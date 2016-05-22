@@ -5,13 +5,6 @@ namespace Ex04.Menus.Interfaces
 
     internal class InputUtils
     {
-        public const string k_GetBoundedIntFromConsoleTemplate = "Invalid input, please enter a number between {0} and {1} :";
-        public const string k_GetIntFromConsoleInvalidMessage = "Invalid input, please enter a number";
-        public const string k_GetSepcificCharsFromConsoleInvalidTemplate = "Please enter a charecter from these valid characters: '{0}' ";
-        public const string k_GetSepcificCharsFromConsoleExceptionMessage = "Missing valid character params";
-        public const string k_GetSingleCharFromConsoleInvalidInputMessage = "Invalid input, Please enter a single character:";
-        public const string k_GetBoundedIntOrQuitFromConsoleInvalidTemplate = "Invalid input, please enter a number between {0} to {1} ,or {2} to quit";
-
         public static int GetBoundedIntFromConsole(int i_Min, int i_Max)
         {
             int result = GetIntFromConsole();
