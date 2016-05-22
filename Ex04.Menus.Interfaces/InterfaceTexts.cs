@@ -2,7 +2,6 @@
 {
     internal class InterfaceTexts
     {
-        public const string k_GetBoundedIntFromConsoleTemplate = "Invalid input, please enter a number between {0} and {1} :";
         public const string k_GetIntFromConsoleInvalidMessage = "Invalid input, please enter a number";
         public const string k_SubMenuBackText = "Back";
         public const string k_MainMenuBackText = "Exit";
@@ -11,5 +10,8 @@
         public const string k_MenuHeaderTemplate = @"=====================
 {0}
 =====================";
+
+        public const string k_GetBoundedIntFromConsoleTemplate =
+            "Invalid input, please enter a number between {0} and {1} :";
     }
 }

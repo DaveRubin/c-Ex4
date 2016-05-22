@@ -1,7 +1,6 @@
-﻿using System;
-
-namespace Ex04.Menus.Interfaces
+﻿namespace Ex04.Menus.Interfaces
 {
+    using System;
 
     internal class InputUtils
     {
@@ -11,8 +10,7 @@ namespace Ex04.Menus.Interfaces
 
             while (!IntInBounds(result, i_Min, i_Max))
             {
-                Console.WriteLine(
-                    string.Format(k_GetBoundedIntFromConsoleTemplate, i_Min, i_Max));
+                Console.WriteLine(string.Format(InterfaceTexts.k_GetBoundedIntFromConsoleTemplate, i_Min, i_Max));
                 result = GetIntFromConsole();
             }
 
@@ -26,7 +24,7 @@ namespace Ex04.Menus.Interfaces
 
             while (!int.TryParse(userInput, out result))
             {
-                Console.WriteLine(k_GetIntFromConsoleInvalidMessage);
+                Console.WriteLine(InterfaceTexts.k_GetIntFromConsoleInvalidMessage);
                 userInput = Console.ReadLine();
             }
 

@@ -4,22 +4,21 @@
 
     public class Menu
     {
-
-        public readonly string k_Title;
+        public readonly string r_Title;
         private List<MenuItem> m_MenuItems;
-        protected string m_BackWord;
+        protected string m_BackText;
         protected string m_Title;
 
         internal Menu(string i_Title, string i_backWord)
         {
             m_Title = i_Title;
-            m_BackWord = i_backWord;
+            m_BackText = i_backWord;
             m_MenuItems = new List<MenuItem>();
         }
 
         public void Show()
         {
-            MenuView.PrintMenu(m_Title,m_BackWord,m_MenuItems);
+            MenuView.PrintMenu(m_Title, m_BackText, m_MenuItems);
             GetInput();
         }
 
@@ -36,9 +35,7 @@
                 selectedMenuItem.OnSelection();
                 Show();
             }
-
         }
-
 
         /// <summary>
         /// Add new item to list

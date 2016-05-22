@@ -5,12 +5,11 @@
 
     public class MenuView
     {
-
         public static void PrintMenu(string i_Header, string i_BackWord, List<MenuItem> i_Items)
         {
             Console.Clear();
             PrintHeader(i_Header);
-            PrintMenuItems(i_Items,i_BackWord);
+            PrintMenuItems(i_Items, i_BackWord);
             PrintUserSelectionPrompt();
         }
 
@@ -19,7 +18,7 @@
         /// </summary>
         private static void PrintUserSelectionPrompt()
         {
-            Console.WriteLine(k_MenuGetSelectionMessage);
+            Console.WriteLine(InterfaceTexts.k_MenuGetSelectionMessage);
         }
 
         /// <summary>
@@ -47,7 +46,7 @@
         /// <param name="i_Title"></param>
         private static void PrintHeader(string i_Title)
         {
-            Console.WriteLine(string.Format(k_MenuHeaderTemplate, i_Title));
+            Console.WriteLine(string.Format(InterfaceTexts.k_MenuHeaderTemplate, i_Title));
         }
 
         /// <summary>
@@ -57,7 +56,7 @@
         /// <param name="i_MenuItem"></param>
         private static void PrintMenuItem(int i_Index, string i_MenuItem)
         {
-            Console.WriteLine(string.Format(k_MenuItemTemplate, i_Index, i_MenuItem));
+            Console.WriteLine(string.Format(InterfaceTexts.k_MenuItemTemplate, i_Index, i_MenuItem));
         }
     }
 }
