@@ -2,7 +2,7 @@
 {
     using System;
 
-    public abstract class CharActionClassBase : InterfaceActionBase
+    public abstract class CharActionClassBase : ClearScreenDoActionWaitForUserDoableBase
     {
         protected string GetStringFromUser()
         {

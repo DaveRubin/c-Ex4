@@ -4,7 +4,7 @@
 
     using Ex04.Menus.Interfaces;
 
-    public class VersionPrinter : InterfaceActionBase, IDoable
+    public class VersionPrinter : ClearScreenDoActionWaitForUserDoableBase
     {
         private readonly string r_Version;
 
@@ -13,11 +13,11 @@
             r_Version = i_Version;
         }
 
-        public void Do()
+        public override void DoAction()
         {
-            PreAction();
+            PreActionClear();
             Console.WriteLine(string.Format(InterfaceTestTexts.k_VersionTemplate, r_Version));
-            PostAction();
+            PostActionWait();
         }
     }
 }

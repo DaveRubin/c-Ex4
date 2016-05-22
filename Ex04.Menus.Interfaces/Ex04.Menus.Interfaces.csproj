@@ -37,16 +37,12 @@
   <ItemGroup>
     <Compile Include="ActionItem.cs" />
     <Compile Include="BackItem.cs" />
-    <Compile Include="Doable1.cs" />
-    <Compile Include="Doable3.cs" />
-    <Compile Include="Doable2.cs" />
     <Compile Include="IDoable.cs" />
     <Compile Include="InputUtils.cs" />
     <Compile Include="MainMenu.cs" />
     <Compile Include="MenuItem.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="MenuView.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="SubMenu.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

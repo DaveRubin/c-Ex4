@@ -4,15 +4,15 @@
 
     using Ex04.Menus.Interfaces;
 
-    public class SpacesCounter : CharActionClassBase, IDoable
+    public class SpacesCounter : CharActionClassBase
     {
-        public void Do()
+        public override void DoAction()
         {
-            PreAction();
+            PreActionClear();
             string userInput = GetStringFromUser();
             int spaceCount = CountSpaces(userInput);
             Console.WriteLine(InterfaceTestTexts.k_SpacesCountMessageTemplate, spaceCount);
-            PostAction();
+            PostActionWait();
         }
 
         private int CountSpaces(string i_String)

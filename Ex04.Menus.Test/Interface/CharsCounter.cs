@@ -4,14 +4,12 @@
 
     using Ex04.Menus.Interfaces;
 
-    public class CharsCounter : CharActionClassBase, IDoable
+    public class CharsCounter : CharActionClassBase
     {
-        public void Do()
+        public override void DoAction()
         {
-            PreAction();
             string userInput = GetStringFromUser();
             Console.WriteLine(InterfaceTestTexts.k_CharsCountMessageTemplate, userInput.Length);
-            PostAction();
         }
     }
 }

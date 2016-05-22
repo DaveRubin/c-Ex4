@@ -3,9 +3,7 @@
     using System;
     using System.Collections.Generic;
 
-    using Ex04.Menus.Interfaces;
-
-    public class DateTimePrinter : InterfaceActionBase, IDoable
+    public class DateTimePrinter : ClearScreenDoActionWaitForUserDoableBase
     {
         private const string k_DateTimeEnumValueForDate = "d";
         private const string k_DateTimeEnumValueForTime = "t";
@@ -42,11 +40,11 @@
         /// <summary>
         /// Print Now in the selected format
         /// </summary>
-        public void Do()
+        public override void DoAction()
         {
-            PreAction();
+            PreActionClear();
             Console.WriteLine(DateTime.Now.ToString(m_SelectedDateTimeFormat));
-            PostAction();
+            PostActionWait();
         }
 
         public enum ePrintDateTimeType

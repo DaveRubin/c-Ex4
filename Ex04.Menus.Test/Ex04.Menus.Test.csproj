@@ -40,7 +40,7 @@
     <Compile Include="Interface\CharActionClassBase.cs" />
     <Compile Include="Interface\CharsCounter.cs" />
     <Compile Include="Interface\DateTimePrinter.cs" />
-    <Compile Include="Interface\InterfaceActionBase.cs" />
+    <Compile Include="Interface\ClearScreenDoActionWaitForUserDoableBase.cs" />
     <Compile Include="Interface\InterfaceTestTexts.cs" />
     <Compile Include="Interface\SpacesCounter.cs" />
     <Compile Include="Interface\VersionPrinter.cs" />
