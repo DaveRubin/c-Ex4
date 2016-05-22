@@ -2,13 +2,11 @@
 {
     using System;
 
-    public class CharActionClassBase
+    public abstract class CharActionClassBase : InterfaceActionBase
     {
-        private string k_PleaseEnterStringMessage = "Please enter a string: ";
-
         protected string GetStringFromUser()
         {
-            Console.WriteLine(k_PleaseEnterStringMessage);
+            Console.WriteLine(InterfaceTestTexts.k_PleaseEnterStringMessage);
             return Console.ReadLine();
         }
     }

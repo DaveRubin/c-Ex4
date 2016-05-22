@@ -1,26 +1,13 @@
 ﻿namespace Ex04.Menus.Test
 {
-    using System;
-
     using Ex04.Menus.Interfaces;
     using Ex04.Menus.Test.Interface;
 
     public class InterfaceTest
     {
-        private string k_CharsCountTitle = "Chars Count";
-        private string k_SpacesCountTitle = "Count Spaces";
-        private string k_DateTimeMenuTitle = "Show Date/Time";
-        private const string k_PrintTimeTitle = "Show time";
-        private const string k_PrintDateTitle = "Show Date";
-        private const string k_ActionsMenuTitle = "Actions";
-        private const string k_SubMenuATitle = "Versions and Actions";
-        private const string k_SubMenuAShowVersionItemName = "Show Version";
-        private const string k_Version = "6.6.6";
-
         public void Test()
         {
-            Console.WriteLine("Testing interface");
-            MainMenu mainMenu = new MainMenu("Main");
+            MainMenu mainMenu = new MainMenu(InterfaceTestTexts.k_MainMenuTitle);
             SubMenu versionActionsMenu = CreateVersionActionMenu();
             SubMenu dateTimeMenu = CreateDateTimeMenu();
 
@@ -31,11 +18,11 @@
 
         private SubMenu CreateVersionActionMenu()
         {
-            VersionPrinter versionPrinter = new VersionPrinter(k_Version);
-            ActionItem showVersionItem = new ActionItem(k_SubMenuAShowVersionItemName, versionPrinter);
+            VersionPrinter versionPrinter = new VersionPrinter(InterfaceTestTexts.k_Version);
+            ActionItem showVersionItem = new ActionItem(InterfaceTestTexts.k_ShowVersionTitle, versionPrinter);
             SubMenu actionSubMenu = CreateActionsMenu();
 
-            SubMenu versionActionSubmenu = new SubMenu(k_SubMenuATitle);
+            SubMenu versionActionSubmenu = new SubMenu(InterfaceTestTexts.k_VersionActionsMenuTitle);
             versionActionSubmenu.AddItem(showVersionItem);
             versionActionSubmenu.AddItem(actionSubMenu);
 
@@ -46,10 +33,10 @@
         {
             CharsCounter charsCounter = new CharsCounter();
             SpacesCounter spacesCounter = new SpacesCounter();
-            ActionItem charsCountItem = new ActionItem(k_CharsCountTitle, charsCounter);
-            ActionItem spacesCountItem = new ActionItem(k_SpacesCountTitle, spacesCounter);
+            ActionItem charsCountItem = new ActionItem(InterfaceTestTexts.k_CharsCountTitle, charsCounter);
+            ActionItem spacesCountItem = new ActionItem(InterfaceTestTexts.k_SpacesCountTitle, spacesCounter);
 
-            SubMenu actionSubMenu = new SubMenu(k_ActionsMenuTitle);
+            SubMenu actionSubMenu = new SubMenu(InterfaceTestTexts.k_ActionsMenuTitle);
             actionSubMenu.AddItem(charsCountItem);
             actionSubMenu.AddItem(spacesCountItem);
 
@@ -58,12 +45,12 @@
 
         private SubMenu CreateDateTimeMenu()
         {
-            TimePrinter timePrinter = new TimePrinter();
-            DatePrinter datePrinter = new DatePrinter();
-            ActionItem printTimeAction = new ActionItem(k_PrintTimeTitle,timePrinter);
-            ActionItem printDateAction = new ActionItem(k_PrintDateTitle, datePrinter);
+            DateTimePrinter timePrinter = new DateTimePrinter(DateTimePrinter.ePrintDateTimeType.Time);
+            DateTimePrinter datePrinter = new DateTimePrinter(DateTimePrinter.ePrintDateTimeType.Date);
+            ActionItem printTimeAction = new ActionItem(InterfaceTestTexts.k_PrintTimeTitle, timePrinter);
+            ActionItem printDateAction = new ActionItem(InterfaceTestTexts.k_PrintDateTitle, datePrinter);
 
-            SubMenu dateTimeMenu = new SubMenu(k_DateTimeMenuTitle);
+            SubMenu dateTimeMenu = new SubMenu(InterfaceTestTexts.k_DateTimeMenuTitle);
             dateTimeMenu.AddItem(printDateAction);
             dateTimeMenu.AddItem(printTimeAction);
 

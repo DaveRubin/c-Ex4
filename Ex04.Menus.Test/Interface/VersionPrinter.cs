@@ -1,13 +1,11 @@
 ﻿namespace Ex04.Menus.Test.Interface
 {
     using System;
+
     using Ex04.Menus.Interfaces;
 
-    public class VersionPrinter : IDoable
+    public class VersionPrinter : InterfaceActionBase, IDoable
     {
-        private const string k_VersionTemplate = @"Current version is : {0}
-
-Press 'Enter' to continue.";
         private readonly string r_Version;
 
         public VersionPrinter(string i_Version)
@@ -17,9 +15,9 @@ Press 'Enter' to continue.";
 
         public void Do()
         {
-            Console.Clear();
-            Console.WriteLine(string.Format(k_VersionTemplate,r_Version));
-            Console.ReadLine();
+            PreAction();
+            Console.WriteLine(string.Format(InterfaceTestTexts.k_VersionTemplate, r_Version));
+            PostAction();
         }
     }
 }

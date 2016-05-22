@@ -3,18 +3,16 @@
     using System;
 
     using Ex04.Menus.Interfaces;
+
     public class SpacesCounter : CharActionClassBase, IDoable
     {
-        private string k_SpacesCountMessageTemplate = @"The inserted string have {0} spaces in it
-Press 'Enter' to continue";
-
         public void Do()
         {
-            Console.Clear();
+            PreAction();
             string userInput = GetStringFromUser();
             int spaceCount = CountSpaces(userInput);
-            Console.WriteLine(k_SpacesCountMessageTemplate, spaceCount);
-            Console.ReadLine();
+            Console.WriteLine(InterfaceTestTexts.k_SpacesCountMessageTemplate, spaceCount);
+            PostAction();
         }
 
         private int CountSpaces(string i_String)
