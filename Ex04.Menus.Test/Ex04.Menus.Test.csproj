@@ -50,9 +50,16 @@
     <Reference Include="Ex04.Menus.Interfaces">
       <HintPath>..\Ex04.Menus.Interfaces\Ex04.Menus.Interfaces.dll</HintPath>
     </Reference>
+    <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ex04.Menus.Delegated\Ex04.Menus.Delegates.csproj">
+      <Project>{05f9f6b7-e131-4109-9b07-99f9f86b7d2f}</Project>
+      <Name>Ex04.Menus.Delegates</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
