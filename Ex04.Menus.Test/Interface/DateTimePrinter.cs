@@ -42,9 +42,7 @@
         /// </summary>
         public override void DoAction()
         {
-            PreActionClear();
             Console.WriteLine(DateTime.Now.ToString(m_SelectedDateTimeFormat));
-            PostActionWait();
         }
 
         public enum ePrintDateTimeType

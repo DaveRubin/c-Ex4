@@ -8,11 +8,9 @@
     {
         public override void DoAction()
         {
-            PreActionClear();
             string userInput = GetStringFromUser();
             int spaceCount = CountSpaces(userInput);
             Console.WriteLine(InterfaceTestTexts.k_SpacesCountMessageTemplate, spaceCount);
-            PostActionWait();
         }
 
         private int CountSpaces(string i_String)

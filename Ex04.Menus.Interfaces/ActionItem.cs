@@ -2,17 +2,28 @@
 {
     public class ActionItem : MenuItem
     {
-        private readonly IDoable r_Doable;
+        private readonly DoablesNotifier m_Doables;
 
         public ActionItem(string i_Name, IDoable i_Doable)
             : base(i_Name)
         {
-            r_Doable = i_Doable;
+            m_Doables = new DoablesNotifier();
+            AddDoable(i_Doable);
+        }
+
+        public void AddDoable(IDoable i_Doable)
+        {
+            m_Doables.AddDoable(i_Doable);
+        }
+
+        public void RemoveDoable(IDoable i_Doable)
+        {
+            m_Doables.RemoveDoable(i_Doable);
         }
 
         public override void OnSelection()
         {
-            r_Doable.Do();
+            m_Doables.NotifyAll();
         }
     }
 }

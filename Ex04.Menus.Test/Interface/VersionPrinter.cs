@@ -15,9 +15,7 @@
 
         public override void DoAction()
         {
-            PreActionClear();
             Console.WriteLine(string.Format(InterfaceTestTexts.k_VersionTemplate, r_Version));
-            PostActionWait();
         }
     }
 }

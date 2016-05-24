@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ActionItem.cs" />
+    <Compile Include="DoablesNotifier.cs" />
     <Compile Include="IDoable.cs" />
     <Compile Include="InputUtils.cs" />
     <Compile Include="InterfaceTexts.cs" />
